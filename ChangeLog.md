@@ -20,6 +20,12 @@ Current Trunk
 
 - emcc now accepts `--arg=foo` as well as `--arg foo`.  For example
   `--js-library=file.js`.
+- emrun: Passing command line flags (arguments that start with `-`) to the
+  program bring run now requires a `--` on the command line to signal the
+  end of `emrun` arguments. e.g:
+    `emrun filename.html -- --arg-for-page`
+  This is standard behaviour for command line parsing and simplifies the
+  emrun logic.
 
 2.0.7: 10/13/2020
 -----------------
